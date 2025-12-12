@@ -167,7 +167,7 @@ namespace WPFCalendarTool.ViewModels
 
         private async void UpdateWeather()
         {
-            string apiKey = "S2uNHXu7T64WC-NGO";  // 替换为你的心知天气 Key
+            string apiKey = "";  // 替换为你的心知天气 Key
 
             var weatherService = new WeatherService(apiKey);
 
