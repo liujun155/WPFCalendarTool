@@ -1,0 +1,667 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UseWPF>true</UseWPF>
+		<UseWindowsForms>true</UseWindowsForms>
+		<ApplicationIcon>天气.ico</ApplicationIcon>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="Themes\Images\Weather\black\0%401x.png" />
+		<None Remove="Themes\Images\Weather\black\0%402x.png" />
+		<None Remove="Themes\Images\Weather\black\1%401x.png" />
+		<None Remove="Themes\Images\Weather\black\1%402x.png" />
+		<None Remove="Themes\Images\Weather\black\10%401x.png" />
+		<None Remove="Themes\Images\Weather\black\10%402x.png" />
+		<None Remove="Themes\Images\Weather\black\11%401x.png" />
+		<None Remove="Themes\Images\Weather\black\11%402x.png" />
+		<None Remove="Themes\Images\Weather\black\12%401x.png" />
+		<None Remove="Themes\Images\Weather\black\12%402x.png" />
+		<None Remove="Themes\Images\Weather\black\13%401x.png" />
+		<None Remove="Themes\Images\Weather\black\13%402x.png" />
+		<None Remove="Themes\Images\Weather\black\14%401x.png" />
+		<None Remove="Themes\Images\Weather\black\14%402x.png" />
+		<None Remove="Themes\Images\Weather\black\15%401x.png" />
+		<None Remove="Themes\Images\Weather\black\15%402x.png" />
+		<None Remove="Themes\Images\Weather\black\16%401x.png" />
+		<None Remove="Themes\Images\Weather\black\16%402x.png" />
+		<None Remove="Themes\Images\Weather\black\17%401x.png" />
+		<None Remove="Themes\Images\Weather\black\17%402x.png" />
+		<None Remove="Themes\Images\Weather\black\18%401x.png" />
+		<None Remove="Themes\Images\Weather\black\18%402x.png" />
+		<None Remove="Themes\Images\Weather\black\19%401x.png" />
+		<None Remove="Themes\Images\Weather\black\19%402x.png" />
+		<None Remove="Themes\Images\Weather\black\2%401x.png" />
+		<None Remove="Themes\Images\Weather\black\2%402x.png" />
+		<None Remove="Themes\Images\Weather\black\20%401x.png" />
+		<None Remove="Themes\Images\Weather\black\20%402x.png" />
+		<None Remove="Themes\Images\Weather\black\21%401x.png" />
+		<None Remove="Themes\Images\Weather\black\21%402x.png" />
+		<None Remove="Themes\Images\Weather\black\22%401x.png" />
+		<None Remove="Themes\Images\Weather\black\22%402x.png" />
+		<None Remove="Themes\Images\Weather\black\23%401x.png" />
+		<None Remove="Themes\Images\Weather\black\23%402x.png" />
+		<None Remove="Themes\Images\Weather\black\24%401x.png" />
+		<None Remove="Themes\Images\Weather\black\24%402x.png" />
+		<None Remove="Themes\Images\Weather\black\25%401x.png" />
+		<None Remove="Themes\Images\Weather\black\25%402x.png" />
+		<None Remove="Themes\Images\Weather\black\26%401x.png" />
+		<None Remove="Themes\Images\Weather\black\26%402x.png" />
+		<None Remove="Themes\Images\Weather\black\27%401x.png" />
+		<None Remove="Themes\Images\Weather\black\27%402x.png" />
+		<None Remove="Themes\Images\Weather\black\28%401x.png" />
+		<None Remove="Themes\Images\Weather\black\28%402x.png" />
+		<None Remove="Themes\Images\Weather\black\29%401x.png" />
+		<None Remove="Themes\Images\Weather\black\29%402x.png" />
+		<None Remove="Themes\Images\Weather\black\3%401x.png" />
+		<None Remove="Themes\Images\Weather\black\3%402x.png" />
+		<None Remove="Themes\Images\Weather\black\30%401x.png" />
+		<None Remove="Themes\Images\Weather\black\30%402x.png" />
+		<None Remove="Themes\Images\Weather\black\31%401x.png" />
+		<None Remove="Themes\Images\Weather\black\31%402x.png" />
+		<None Remove="Themes\Images\Weather\black\32%401x.png" />
+		<None Remove="Themes\Images\Weather\black\32%402x.png" />
+		<None Remove="Themes\Images\Weather\black\33%401x.png" />
+		<None Remove="Themes\Images\Weather\black\33%402x.png" />
+		<None Remove="Themes\Images\Weather\black\34%401x.png" />
+		<None Remove="Themes\Images\Weather\black\34%402x.png" />
+		<None Remove="Themes\Images\Weather\black\35%401x.png" />
+		<None Remove="Themes\Images\Weather\black\35%402x.png" />
+		<None Remove="Themes\Images\Weather\black\36%401x.png" />
+		<None Remove="Themes\Images\Weather\black\36%402x.png" />
+		<None Remove="Themes\Images\Weather\black\37%401x.png" />
+		<None Remove="Themes\Images\Weather\black\37%402x.png" />
+		<None Remove="Themes\Images\Weather\black\38%401x.png" />
+		<None Remove="Themes\Images\Weather\black\38%402x.png" />
+		<None Remove="Themes\Images\Weather\black\4%401x.png" />
+		<None Remove="Themes\Images\Weather\black\4%402x.png" />
+		<None Remove="Themes\Images\Weather\black\5%401x.png" />
+		<None Remove="Themes\Images\Weather\black\5%402x.png" />
+		<None Remove="Themes\Images\Weather\black\6%401x.png" />
+		<None Remove="Themes\Images\Weather\black\6%402x.png" />
+		<None Remove="Themes\Images\Weather\black\7%401x.png" />
+		<None Remove="Themes\Images\Weather\black\7%402x.png" />
+		<None Remove="Themes\Images\Weather\black\8%401x.png" />
+		<None Remove="Themes\Images\Weather\black\8%402x.png" />
+		<None Remove="Themes\Images\Weather\black\9%401x.png" />
+		<None Remove="Themes\Images\Weather\black\9%402x.png" />
+		<None Remove="Themes\Images\Weather\black\99%401x.png" />
+		<None Remove="Themes\Images\Weather\black\99%402x.png" />
+		<None Remove="Themes\Images\Weather\white\0%401x.png" />
+		<None Remove="Themes\Images\Weather\white\0%402x.png" />
+		<None Remove="Themes\Images\Weather\white\1%401x.png" />
+		<None Remove="Themes\Images\Weather\white\1%402x.png" />
+		<None Remove="Themes\Images\Weather\white\10%401x.png" />
+		<None Remove="Themes\Images\Weather\white\10%402x.png" />
+		<None Remove="Themes\Images\Weather\white\11%401x.png" />
+		<None Remove="Themes\Images\Weather\white\11%402x.png" />
+		<None Remove="Themes\Images\Weather\white\12%401x.png" />
+		<None Remove="Themes\Images\Weather\white\12%402x.png" />
+		<None Remove="Themes\Images\Weather\white\13%401x.png" />
+		<None Remove="Themes\Images\Weather\white\13%402x.png" />
+		<None Remove="Themes\Images\Weather\white\14%401x.png" />
+		<None Remove="Themes\Images\Weather\white\14%402x.png" />
+		<None Remove="Themes\Images\Weather\white\15%401x.png" />
+		<None Remove="Themes\Images\Weather\white\15%402x.png" />
+		<None Remove="Themes\Images\Weather\white\16%401x.png" />
+		<None Remove="Themes\Images\Weather\white\16%402x.png" />
+		<None Remove="Themes\Images\Weather\white\17%401x.png" />
+		<None Remove="Themes\Images\Weather\white\17%402x.png" />
+		<None Remove="Themes\Images\Weather\white\18%401x.png" />
+		<None Remove="Themes\Images\Weather\white\18%402x.png" />
+		<None Remove="Themes\Images\Weather\white\19%401x.png" />
+		<None Remove="Themes\Images\Weather\white\19%402x.png" />
+		<None Remove="Themes\Images\Weather\white\2%401x.png" />
+		<None Remove="Themes\Images\Weather\white\2%402x.png" />
+		<None Remove="Themes\Images\Weather\white\20%401x.png" />
+		<None Remove="Themes\Images\Weather\white\20%402x.png" />
+		<None Remove="Themes\Images\Weather\white\21%401x.png" />
+		<None Remove="Themes\Images\Weather\white\21%402x.png" />
+		<None Remove="Themes\Images\Weather\white\22%401x.png" />
+		<None Remove="Themes\Images\Weather\white\22%402x.png" />
+		<None Remove="Themes\Images\Weather\white\23%401x.png" />
+		<None Remove="Themes\Images\Weather\white\23%402x.png" />
+		<None Remove="Themes\Images\Weather\white\24%401x.png" />
+		<None Remove="Themes\Images\Weather\white\24%402x.png" />
+		<None Remove="Themes\Images\Weather\white\25%401x.png" />
+		<None Remove="Themes\Images\Weather\white\25%402x.png" />
+		<None Remove="Themes\Images\Weather\white\26%401x.png" />
+		<None Remove="Themes\Images\Weather\white\26%402x.png" />
+		<None Remove="Themes\Images\Weather\white\27%401x.png" />
+		<None Remove="Themes\Images\Weather\white\27%402x.png" />
+		<None Remove="Themes\Images\Weather\white\28%401x.png" />
+		<None Remove="Themes\Images\Weather\white\28%402x.png" />
+		<None Remove="Themes\Images\Weather\white\29%401x.png" />
+		<None Remove="Themes\Images\Weather\white\29%402x.png" />
+		<None Remove="Themes\Images\Weather\white\3%401x.png" />
+		<None Remove="Themes\Images\Weather\white\3%402x.png" />
+		<None Remove="Themes\Images\Weather\white\30%401x.png" />
+		<None Remove="Themes\Images\Weather\white\30%402x.png" />
+		<None Remove="Themes\Images\Weather\white\31%401x.png" />
+		<None Remove="Themes\Images\Weather\white\31%402x.png" />
+		<None Remove="Themes\Images\Weather\white\32%401x.png" />
+		<None Remove="Themes\Images\Weather\white\32%402x.png" />
+		<None Remove="Themes\Images\Weather\white\33%401x.png" />
+		<None Remove="Themes\Images\Weather\white\33%402x.png" />
+		<None Remove="Themes\Images\Weather\white\34%401x.png" />
+		<None Remove="Themes\Images\Weather\white\34%402x.png" />
+		<None Remove="Themes\Images\Weather\white\35%401x.png" />
+		<None Remove="Themes\Images\Weather\white\35%402x.png" />
+		<None Remove="Themes\Images\Weather\white\36%401x.png" />
+		<None Remove="Themes\Images\Weather\white\36%402x.png" />
+		<None Remove="Themes\Images\Weather\white\37%401x.png" />
+		<None Remove="Themes\Images\Weather\white\37%402x.png" />
+		<None Remove="Themes\Images\Weather\white\38%401x.png" />
+		<None Remove="Themes\Images\Weather\white\38%402x.png" />
+		<None Remove="Themes\Images\Weather\white\4%401x.png" />
+		<None Remove="Themes\Images\Weather\white\4%402x.png" />
+		<None Remove="Themes\Images\Weather\white\5%401x.png" />
+		<None Remove="Themes\Images\Weather\white\5%402x.png" />
+		<None Remove="Themes\Images\Weather\white\6%401x.png" />
+		<None Remove="Themes\Images\Weather\white\6%402x.png" />
+		<None Remove="Themes\Images\Weather\white\7%401x.png" />
+		<None Remove="Themes\Images\Weather\white\7%402x.png" />
+		<None Remove="Themes\Images\Weather\white\8%401x.png" />
+		<None Remove="Themes\Images\Weather\white\8%402x.png" />
+		<None Remove="Themes\Images\Weather\white\9%401x.png" />
+		<None Remove="Themes\Images\Weather\white\9%402x.png" />
+		<None Remove="Themes\Images\Weather\white\99%401x.png" />
+		<None Remove="Themes\Images\Weather\white\99%402x.png" />
+		<None Remove="天气.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="Themes\Images\Weather\black\0@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\0@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\10@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\10@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\11@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\11@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\12@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\12@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\13@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\13@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\14@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\14@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\15@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\15@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\16@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\16@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\17@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\17@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\18@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\18@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\19@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\19@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\1@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\1@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\20@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\20@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\21@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\21@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\22@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\22@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\23@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\23@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\24@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\24@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\25@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\25@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\26@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\26@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\27@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\27@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\28@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\28@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\29@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\29@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\2@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\2@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\30@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\30@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\31@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\31@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\32@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\32@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\33@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\33@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\34@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\34@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\35@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\35@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\36@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\36@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\37@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\37@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\38@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\38@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\3@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\3@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\4@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\4@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\5@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\5@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\6@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\6@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\7@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\7@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\8@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\8@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\99@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\99@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\9@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\black\9@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\0@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\0@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\10@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\10@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\11@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\11@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\12@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\12@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\13@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\13@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\14@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\14@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\15@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\15@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\16@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\16@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\17@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\17@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\18@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\18@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\19@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\19@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\1@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\1@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\20@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\20@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\21@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\21@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\22@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\22@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\23@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\23@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\24@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\24@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\25@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\25@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\26@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\26@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\27@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\27@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\28@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\28@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\29@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\29@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\2@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\2@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\30@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\30@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\31@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\31@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\32@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\32@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\33@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\33@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\34@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\34@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\35@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\35@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\36@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\36@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\37@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\37@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\38@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\38@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\3@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\3@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\4@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\4@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\5@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\5@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\6@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\6@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\7@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\7@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\8@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\8@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\99@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\99@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\9@1x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Themes\Images\Weather\white\9@2x.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="天气.ico">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Caliburn.Micro" Version="5.0.258" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,116 @@
+﻿<Window
+    x:Class="WPFCalendarTool.Views.CalendarView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cal="http://www.caliburnproject.org"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WPFCalendarTool.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="我的日历"
+    Width="440"
+    Height="665"
+    cal:Message.Attach="[Event MouseLeftButtonDown] = [DragWindow($source, $eventArgs)];[Event Deactivated] = [OnWindowDeactivated($source)]"
+    d:Background="#fff"
+    AllowsTransparency="True"
+    Background="Transparent"
+    ShowInTaskbar="False"
+    Topmost="True"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Grid>
+        <Border
+            Background="{DynamicResource WindowBackgroundBrush}"
+            BorderBrush="Gray"
+            BorderThickness="1"
+            CornerRadius="10"
+            Opacity="0.95" />
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="115" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!--  标题栏  -->
+            <Grid Grid.Row="0" Margin="0,0,0,10">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="{DynamicResource ForegroundBrush}"
+                    Text="日历工具" />
+                <Button
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    cal:Message.Attach="[Event Click] = [ToggleTheme($source, $eventArgs)]"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Content="🌙"
+                    Cursor="Hand"
+                    FontSize="16"
+                    Foreground="{DynamicResource ForegroundBrush}"
+                    ToolTip="切换主题" />
+            </Grid>
+
+            <!--  时间及天气  -->
+            <Grid Grid.Row="1" Margin="10,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <StackPanel
+                    Grid.Column="0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center">
+                    <TextBlock
+                        d:Text="10:30:45"
+                        FontFamily="Arial"
+                        FontSize="50"
+                        FontWeight="Bold"
+                        Foreground="{DynamicResource ForegroundBrush}"
+                        Text="{Binding TimeNow}" />
+                    <TextBlock
+                        Margin="0,10,0,0"
+                        d:Text="2024年6月15日 星期六"
+                        FontSize="16"
+                        Foreground="{DynamicResource ForegroundBrush}"
+                        Text="{Binding DateNow}" />
+                </StackPanel>
+                <StackPanel
+                    Grid.Column="1"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center">
+                    <Image
+                        Width="50"
+                        Height="50"
+                        d:Source="/Themes/Images/tbweather/yin.png"
+                        Source="{Binding WeatherIcon}" />
+                    <TextBlock
+                        Margin="0,10,0,0"
+                        HorizontalAlignment="Center"
+                        d:Text="4℃"
+                        FontSize="16"
+                        Foreground="{DynamicResource ForegroundBrush}"
+                        Text="{Binding WeatherInfo}" />
+                </StackPanel>
+            </Grid>
+
+            <Border
+                Grid.Row="1"
+                Height="0.5"
+                Margin="15,0"
+                VerticalAlignment="Bottom"
+                BorderBrush="#2e3947"
+                BorderThickness="1" />
+
+            <!--  日历内容区域  -->
+            <TextBlock
+                Grid.Row="2"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Foreground="{DynamicResource ForegroundBrush}"
+                Text="日历内容区域" />
+        </Grid>
+    </Grid>
+</Window>
