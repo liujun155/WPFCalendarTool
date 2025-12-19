@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Windows;
 using System.Windows.Forms;
 using WPFCalendarTool.ViewModels;
@@ -25,7 +26,7 @@ namespace WPFCalendarTool
 
             _container.Singleton<IWindowManager, WindowManager>();
             _container.Singleton<IEventAggregator, EventAggregator>();
-            _container.PerRequest<CalendarViewModel>();
+            _container.Singleton<CalendarViewModel>();
         }
 
         protected override object GetInstance(Type service, string key)
@@ -69,24 +70,61 @@ namespace WPFCalendarTool
                 Text = "日历工具",
                 ContextMenuStrip = _contextMenu
             };
-            _notifyIcon.MouseUp += NotifyIcon_MouseUp;
+            _notifyIcon.MouseDown += NotifyIcon_MouseDown;
 
             await DisplayRootViewForAsync<CalendarViewModel>();
         }
 
-        private void NotifyIcon_MouseUp(object sender, MouseEventArgs e)
+        private void NotifyIcon_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                ShowCalendar();
+                var vm = _container.GetInstance<CalendarViewModel>();
+
+                // 查找窗口
+                var existWindow = System.Windows.Application.Current.Windows
+                    .OfType<Window>()
+                    .FirstOrDefault(w => w.DataContext == vm);
+
+                if (existWindow != null && existWindow.IsVisible)
+                {
+                    // 窗口可见则隐藏
+                    vm.HideWindow();
+                }
+                else
+                {
+                    // 窗口不可见或不存在则显示
+                    ShowCalendar();
+                }
             }
         }
 
         private void ShowCalendar()
         {
-            var windowManager = _container.GetInstance<IWindowManager>();
             var vm = _container.GetInstance<CalendarViewModel>();
-            windowManager.ShowWindowAsync(vm);
+
+            // 查找已存在的窗口
+            var existWindow = System.Windows.Application.Current.Windows
+                .OfType<Window>()
+                .FirstOrDefault(w => w.DataContext == vm);
+
+            if (existWindow != null)
+            {
+                // 窗口已存在，显示并激活
+                existWindow.Show();
+                if (existWindow.WindowState == WindowState.Minimized)
+                    existWindow.WindowState = WindowState.Normal;
+                existWindow.Activate();
+                existWindow.Topmost = true;
+                existWindow.Topmost = false;
+                vm.IsWindowOpen = true;
+            }
+            else
+            {
+                // 不存在则新建
+                var windowManager = _container.GetInstance<IWindowManager>();
+                windowManager.ShowWindowAsync(vm);
+            }
         }
 
         protected override void OnExit(object sender, EventArgs e)
